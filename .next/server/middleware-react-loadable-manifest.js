@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST={"../layout/Header/Leftbar/NotificationSlider.tsx -> react-slick":{"id":"../layout/Header/Leftbar/NotificationSlider.tsx -> react-slick","files":["static/chunks/node_modules_pnpm_react-slick_0_29_0_react-dom_18_2_0_react_18_2_0__react_18_2_0_node_modules-332693.js"]}}
