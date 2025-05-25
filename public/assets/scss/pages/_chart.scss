@@ -32,7 +32,6 @@ $url-4: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo/U5AA
   line-height: 21px;
 }
 
-
 .chart-block {
   canvas {
     width: 100% !important;
@@ -60,7 +59,7 @@ $url-4: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo/U5AA
   background-color: $white;
 
   .canvas-container {
-    transition: opacity .5s ease-out;
+    transition: opacity 0.5s ease-out;
   }
 
   &.active {
@@ -68,7 +67,7 @@ $url-4: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo/U5AA
   }
 
   &.dropbox .canvas-container {
-    opacity: .5;
+    opacity: 0.5;
   }
 }
 
@@ -132,22 +131,21 @@ $url-4: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo/U5AA
   left: 0;
   top: 0;
   visibility: hidden;
-  background: rgba(49, 49, 49, 0.70);
+  background: rgba(49, 49, 49, 0.7);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
   color: $white;
-  font: 10px $font-rubik, $font-serif;
+  font: 10px $font-figtree, $font-serif;
   text-align: left;
   white-space: nowrap;
   padding: 5px;
   border: 1px solid rgba(49, 49, 49, 0.75);
-  ;
   box-sizing: content-box;
   z-index: 10000;
   border-radius: 5px;
 
   .jqsfield {
     color: $white;
-    font: 10px $font-rubik, $font-serif;
+    font: 10px $font-figtree, $font-serif;
     text-align: left;
   }
 }
@@ -182,7 +180,7 @@ $url-4: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo/U5AA
     line-height: 56px;
   }
 
-  >img {
+  > img {
     display: inline-block;
     position: absolute;
     top: 0;
@@ -202,7 +200,18 @@ $url-4: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo/U5AA
 
 .radial-bar-danger {
   &.radial-bar-20 {
-    background-image: linear-gradient(90deg, $light-semi-gray 50%, transparent 50%, transparent), linear-gradient(162deg, $danger-color 50%, $light-semi-gray 50%, $light-semi-gray);
+    background-image: linear-gradient(
+        90deg,
+        $light-semi-gray 50%,
+        transparent 50%,
+        transparent
+      ),
+      linear-gradient(
+        162deg,
+        $danger-color 50%,
+        $light-semi-gray 50%,
+        $light-semi-gray
+      );
   }
 }
 
@@ -216,7 +225,7 @@ $url-4: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo/U5AA
       @extend %chart-1;
     }
 
-    >img {
+    > img {
       @extend %chart-1;
     }
   }
@@ -230,7 +239,7 @@ $url-4: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo/U5AA
       @extend %chart-2;
     }
 
-    >img {
+    > img {
       @extend %chart-2;
     }
   }
@@ -244,7 +253,7 @@ $url-4: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo/U5AA
       @extend %chart-3;
     }
 
-    >img {
+    > img {
       @extend %chart-3;
     }
   }
@@ -254,7 +263,7 @@ $url-4: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo/U5AA
   div {
     color: $white !important;
 
-    input[type=checkbox] {
+    input[type="checkbox"] {
       margin: 7px;
     }
   }
@@ -340,8 +349,7 @@ $url-4: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo/U5AA
 .small-donut,
 .donut-peity2,
 .pie-peity {
-
-  ~svg,
+  ~ svg,
   svg {
     path {
       &:nth-child(odd) {
@@ -356,7 +364,7 @@ $url-4: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo/U5AA
 }
 
 .small-donut2 {
-  ~svg {
+  ~ svg {
     path {
       &:nth-child(odd) {
         fill: var(--theme-secondary);
@@ -366,7 +374,7 @@ $url-4: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo/U5AA
 }
 
 .small-donut3 {
-  ~svg {
+  ~ svg {
     path {
       &:nth-child(odd) {
         fill: $success-color;
@@ -376,7 +384,7 @@ $url-4: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo/U5AA
 }
 
 .small-donut4 {
-  ~svg {
+  ~ svg {
     path {
       &:nth-child(odd) {
         fill: $info-color;
@@ -386,7 +394,7 @@ $url-4: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo/U5AA
 }
 
 .small-donut5 {
-  ~svg {
+  ~ svg {
     path {
       &:nth-child(odd) {
         fill: $warning-color;
@@ -396,7 +404,7 @@ $url-4: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo/U5AA
 }
 
 .small-donut6 {
-  ~svg {
+  ~ svg {
     path {
       &:nth-child(odd) {
         fill: $danger-color;
@@ -453,9 +461,8 @@ p {
   height: 400px;
 }
 
-// chartist chat 
+// chartist chat
 .ct-series-a {
-
   .ct-slice-pie,
   .ct-slice-donut-solid,
   .ct-area {
@@ -471,7 +478,6 @@ p {
 }
 
 .ct-series-b {
-
   .ct-point,
   .ct-line,
   .ct-bar,
@@ -505,7 +511,7 @@ p {
 
 .test-buttons {
   button {
-    +button {
+    + button {
       margin-left: 10px;
     }
   }
@@ -533,7 +539,6 @@ p {
 }
 
 .apexcharts-canvas {
-
   .apexcharts-tooltip,
   .apexcharts-xaxistooltip,
   .apexcharts-yaxistooltip {
@@ -543,7 +548,7 @@ p {
 
 .flot-chart-container {
   .flot-chart-placeholder {
-    ~p.float-end {
+    ~ p.float-end {
       @media (max-width: 1346px) {
         float: left !important;
 

@@ -2,5 +2,8 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/sample-page": "pages/sample-page.js"
+  "/v3/next/dashboard/kl": "pages/v3/next/dashboard/kl.js",
+  "/v3/next/dashboard/bansos": "pages/v3/next/dashboard/bansos.js",
+  "/authentication/login": "pages/authentication/login.js",
+  "/v3/next/dashboard/mbg": "pages/v3/next/dashboard/mbg.js"
 }

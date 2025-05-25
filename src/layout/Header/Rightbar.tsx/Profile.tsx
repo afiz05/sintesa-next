@@ -32,6 +32,8 @@ const Profile = () => {
     await logout();
     localStorage.removeItem("status");
     router.push("/authentication/login");
+    document.body.classList.remove("dark-only");
+    document.body.classList.add("light-only");
   };
   return (
     <li className="profile-nav onhover-dropdown pe-0 py-0">

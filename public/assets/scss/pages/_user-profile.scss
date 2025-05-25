@@ -96,7 +96,7 @@
     .follow-num {
       font-size: 20px;
       color: $theme-font-color;
-      font-family: $font-rubik, $font-serif;
+      font-family: $font-figtree, $font-serif;
       font-weight: 500;
     }
 
@@ -141,7 +141,6 @@
 
       &:first-child {
         a {
-
           &:hover,
           &:active {
             color: $danger-color;
@@ -151,7 +150,7 @@
     }
 
     span {
-      font-family: $font-rubik, $font-serif;
+      font-family: $font-figtree, $font-serif;
     }
   }
 
@@ -180,7 +179,6 @@
     }
   }
 }
-
 
 //Edit profile //
 .edit-profile {

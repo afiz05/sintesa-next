@@ -25,10 +25,25 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/sample-page": [
+    "/authentication/login": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/sample-page.js"
+      "static/chunks/pages/authentication/login.js"
+    ],
+    "/v3/next/dashboard/bansos": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/v3/next/dashboard/bansos.js"
+    ],
+    "/v3/next/dashboard/kl": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/v3/next/dashboard/kl.js"
+    ],
+    "/v3/next/dashboard/mbg": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/v3/next/dashboard/mbg.js"
     ]
   },
   "ampFirstPages": []

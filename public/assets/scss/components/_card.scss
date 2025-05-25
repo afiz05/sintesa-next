@@ -28,7 +28,6 @@
     }
 
     h5 {
-
       &:not(.mb-0),
       &:not(.m-0) {
         margin-bottom: 0;
@@ -36,7 +35,7 @@
       }
     }
 
-    >span {
+    > span {
       font-size: $card-header-span-size;
       color: $card-header-span-color;
       margin-top: 5px;
@@ -157,7 +156,7 @@
 .page-body-wrapper {
   .card {
     .sub-title {
-      font-family: $font-rubik, $font-serif;
+      font-family: $font-figtree, $font-serif;
       font-weight: normal;
       color: $theme-body-sub-title-color;
     }
@@ -256,8 +255,8 @@
   .card-footer {
     padding: 0;
 
-    >div {
-      +div {
+    > div {
+      + div {
         border-left: 1px solid $light-semi-gray;
       }
 
@@ -330,7 +329,7 @@
       li {
         position: relative;
 
-        +li {
+        + li {
           &::before {
             position: absolute;
             content: "";
@@ -360,7 +359,11 @@
   }
 
   &-img-wrap {
-    background: linear-gradient(253deg, var(--theme-deafult) 11.51%, rgba(115, 102, 255, 0) 82.07%);
+    background: linear-gradient(
+      253deg,
+      var(--theme-deafult) 11.51%,
+      rgba(115, 102, 255, 0) 82.07%
+    );
     display: inline-block;
     border-radius: 100%;
     padding: 2px;

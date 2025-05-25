@@ -1,3 +1,4 @@
+import MyContext from "@/auth/Contex";
 import SvgIcon from "CommonElements/Icons/SvgIcon";
 import { sidebarItemType } from "Types/LayoutDataType";
 import CustomizerContext from "helper/Customizer";
@@ -10,14 +11,26 @@ type menuListType = {
   MENUITEMS: sidebarItemType[];
   handleActive: (title: string, level: number) => void;
   active: string;
+  roles: string;
   setActiveLink: Function;
   setActive: Function;
   activeLink: string | undefined;
   level: number;
   className?: string;
 };
-const Menulist = ({setActive,handleActive,active,MENUITEMS,level,activeLink,setActiveLink}: menuListType) => {
+const Menulist = ({
+  roles,
+  setActive,
+  handleActive,
+  active,
+  MENUITEMS,
+  level,
+  activeLink,
+  setActiveLink,
+}: menuListType) => {
   const { pinedMenu, setPinedMenu } = useContext(layoutContext);
+  const { role } = useContext(MyContext);
+
   const handlePined = (value: string | undefined) => {
     if (!pinedMenu.includes(value || "")) {
       setPinedMenu((data) => [...data, value || ""]);
@@ -33,14 +46,35 @@ const Menulist = ({setActive,handleActive,active,MENUITEMS,level,activeLink,setA
   return (
     <>
       {MENUITEMS.map((item, i) => (
-        <li key={i} className={`${pinedMenu.includes(item.title || "") ? "pined" : ""} ${level == 0 ? "sidebar-list" : ""}  `} >
-          {level === 0 && ( <i className="fa fa-thumb-tack" onClick={() => handlePined(item.title)}></i>)}
+        <li
+          key={i}
+          className={`${pinedMenu.includes(item.title || "") ? "pined" : ""} ${
+            level == 0 ? "sidebar-list" : ""
+          }  `}
+        >
+          {level === 0 && (
+            <i
+              className="fa fa-thumb-tack"
+              onClick={() => handlePined(item.title)}
+            ></i>
+          )}
           <a
             style={{ cursor: "pointer" }}
             className={
               level === 0
-                ? `sidebar-link sidebar-title  ${(item.pathSlice && active.includes(item.pathSlice)) ||activeLink == item.path?.split("/")[item.path.split("/").length - 1] ? "active" : ""}`
-                : `text-decoration-none ${activeLink == item.path?.split("/")[item.path.split("/").length - 1]? "active" : ""}`
+                ? `sidebar-link sidebar-title  ${
+                    (item.pathSlice && active.includes(item.pathSlice)) ||
+                    activeLink ==
+                      item.path?.split("/")[item.path.split("/").length - 1]
+                      ? "active"
+                      : ""
+                  }`
+                : `text-decoration-none ${
+                    activeLink ==
+                    item.path?.split("/")[item.path.split("/").length - 1]
+                      ? "active"
+                      : ""
+                  }`
             }
             onClick={() => {
               if (item.type == "sub") {
@@ -49,31 +83,66 @@ const Menulist = ({setActive,handleActive,active,MENUITEMS,level,activeLink,setA
                 if (level == 0) {
                   setActive("");
                 }
-                setActiveLink(item.path?.split("/")[item.path.split("/").length - 1]
+                setActiveLink(
+                  item.path?.split("/")[item.path.split("/").length - 1]
                 );
-                router.push(layoutName? item.path + `?layout=${layoutName.toLowerCase()}`: `/${item.path}`);
+                router.push(
+                  layoutName
+                    ? item.path + `?layout=${layoutName.toLowerCase()}`
+                    : `/${item.path}`
+                );
               }
             }}
           >
-            {item.icon && (<SvgIcon className="stroke-icon" iconId={`stroke-${item.icon}`} />)}
-            {item.icon && (<SvgIcon className="fill-icon" iconId={`fill-${item.icon}`} />)}
+            {item.icon && (
+              <SvgIcon className="stroke-icon" iconId={`stroke-${item.icon}`} />
+            )}
+            {item.icon && (
+              <SvgIcon className="fill-icon" iconId={`fill-${item.icon}`} />
+            )}
             <span>{t(`${item.title}`)}</span>
-            {item.badge ? (<label className={item.badge}>{item.badgetxt}</label>) : ("")}
+            {item.badge ? (
+              <label className={item.badge}>{item.badgetxt}</label>
+            ) : (
+              ""
+            )}
             {item.children && (
               <div className="according-menu">
-                {item.pathSlice && active.includes(item.pathSlice) ? (<i className="fa fa-angle-down" />) : (<i className="fa fa-angle-right" />)}
+                {item.pathSlice && active.includes(item.pathSlice) ? (
+                  <i className="fa fa-angle-down" />
+                ) : (
+                  <i className="fa fa-angle-right" />
+                )}
               </div>
             )}
           </a>
           {item.children && (
-            <ul className={` ${level >= 1? "nav-sub-childmenu submenu-content": "sidebar-submenu list-group"}`}
+            <ul
+              className={` ${
+                level >= 1
+                  ? "nav-sub-childmenu submenu-content"
+                  : "sidebar-submenu list-group"
+              }`}
               style={
                 item.pathSlice && active.includes(item.pathSlice)
-                  ? {opacity: "1",transition: "opacity 500ms ease-in 0s",display: "block",}
+                  ? {
+                      opacity: "1",
+                      transition: "opacity 500ms ease-in 0s",
+                      display: "block",
+                    }
                   : { display: "none" }
               }
             >
-              <Menulist setActive={setActive} MENUITEMS={item.children} handleActive={handleActive} active={active} level={level + 1} activeLink={activeLink} setActiveLink={setActiveLink}/>
+              <Menulist
+                setActive={setActive}
+                MENUITEMS={item.children}
+                handleActive={handleActive}
+                active={active}
+                level={level + 1}
+                activeLink={activeLink}
+                setActiveLink={setActiveLink}
+                roles={roles}
+              />
             </ul>
           )}
         </li>

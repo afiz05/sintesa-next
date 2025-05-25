@@ -2,7 +2,6 @@
     React Plugin 
 ==========================**/
 
-
 // .w-h-24 {
 //     width: 24px;
 //     height: 24px;
@@ -83,7 +82,6 @@
 //         }
 //     }
 // }
-
 
 // dropzone
 .dzu-dropzone {
@@ -973,7 +971,7 @@
       background-color: $primary-color !important;
       border: 1px solid $primary-color !important;
 
-      +.fc-h-event {
+      + .fc-h-event {
         margin-top: 10px;
       }
 
@@ -991,7 +989,7 @@
     }
 
     .fc {
-      td[role='presentation'] {
+      td[role="presentation"] {
         border: 0;
       }
 
@@ -1015,7 +1013,7 @@
 
     .fc-toolbar-chunk {
       .fc-button-group {
-        ~.fc-today-button {
+        ~ .fc-today-button {
           margin: 0 8px;
         }
       }
@@ -1223,14 +1221,14 @@
     figure {
       &.img-hover {
         a {
-          >div {
+          > div {
             overflow: hidden;
           }
         }
 
         &.hover-12 {
           a {
-            >div {
+            > div {
               background: #776aff;
 
               &:hover {
@@ -1410,7 +1408,7 @@
   gap: 10px;
   flex-wrap: wrap;
 
-  >span {
+  > span {
     display: inline-flex !important;
     align-items: center;
     gap: 0px;
@@ -1435,7 +1433,7 @@
     background-color: rgb(232 230 255);
     margin: 4px;
 
-    @media (max-width:1272px) {
+    @media (max-width: 1272px) {
       width: calc(34px + (41 - 34) * ((100vw - 320px) / (1920 - 320)));
     }
   }
@@ -1496,8 +1494,8 @@
       font-weight: 400;
     }
 
-    >span {
-      >span {
+    > span {
+      > span {
         &:first-of-type {
           .pill-rating {
             border-top-left-radius: 999px;
@@ -1533,7 +1531,6 @@
     border-radius: 100% !important;
     border: 1px solid $white;
     height: unset !important;
-
   }
 
   .reactour__close-button {
@@ -1544,8 +1541,8 @@
     width: 12px;
   }
 
-  >div[dir] {
-    >button {
+  > div[dir] {
+    > button {
       display: flex !important;
       color: $white !important;
 
@@ -1795,7 +1792,7 @@
   }
 
   &.ui-accordion {
-    font-family: $font-rubik
+    font-family: $font-figtree;
   }
 }
 
@@ -1812,7 +1809,7 @@
   }
 }
 
-// basic dark card scss 
+// basic dark card scss
 .Dark-Card {
   .bg-dark {
     color: #fff;
@@ -1846,7 +1843,7 @@
 }
 
 .flatpicker-calender {
-  >div {
+  > div {
     width: 100%;
   }
 }
@@ -1935,12 +1932,12 @@
 
 .u-cf {
   &:before {
-    content: ' ';
+    content: " ";
     display: none !important;
   }
 
   &:after {
-    content: ' ';
+    content: " ";
     display: table;
     clear: both;
   }
@@ -2050,14 +2047,14 @@
 
 .dzu-dropzone {
   .dzu-previewContainer {
-    @media (max-width:440px) {
+    @media (max-width: 440px) {
       flex-wrap: wrap;
       gap: 8px;
     }
   }
 
   .dzu-inputLabelWithFiles {
-    @media (max-width:440px) {
+    @media (max-width: 440px) {
       margin-top: 33px;
     }
   }
@@ -2104,7 +2101,6 @@
     }
   }
 }
-
 
 .ProfileCard-screenName {
   display: inline-block;
@@ -2168,7 +2164,7 @@
 
 .cal-datepicker {
   &.widget-calender {
-    @media (max-width:710px) {
+    @media (max-width: 710px) {
       width: 100%;
     }
   }
@@ -2207,10 +2203,9 @@
         }
 
         .react-datepicker__day-names {
-          @media (max-width:710px) {
+          @media (max-width: 710px) {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-
           }
 
           .react-datepicker__day-name {
@@ -2218,7 +2213,7 @@
             width: 2.25rem;
             font-weight: 600;
 
-            @media (max-width:710px) {
+            @media (max-width: 710px) {
               width: auto;
             }
           }
@@ -2227,7 +2222,7 @@
 
       .react-datepicker__month {
         .react-datepicker__week {
-          @media (max-width:710px) {
+          @media (max-width: 710px) {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
           }
@@ -2235,11 +2230,11 @@
           .react-datepicker__day {
             width: 2.25rem;
 
-            @media (max-width:710px) {
+            @media (max-width: 710px) {
               width: auto;
             }
 
-            @media (max-width:480px) {
+            @media (max-width: 480px) {
               width: 1.75rem;
             }
 
@@ -2289,7 +2284,7 @@
             .react-datepicker__day-name {
               width: 1.7rem;
 
-              @media (min-width:1399px) and (max-width:1499px) {
+              @media (min-width: 1399px) and (max-width: 1499px) {
                 width: 1.25rem;
               }
             }
@@ -2301,7 +2296,7 @@
             .react-datepicker__day {
               width: 1.7rem;
 
-              @media (min-width:1399px) and (max-width:1499px) {
+              @media (min-width: 1399px) and (max-width: 1499px) {
                 width: 1.25rem;
               }
             }
