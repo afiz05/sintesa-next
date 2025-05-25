@@ -90,7 +90,10 @@ const Layout = ({ children }: layoutProps) => {
     setSearchableMenu(suggestionArray);
     setBookmarkList(bookmarkArray);
   }, []);
-
+  useEffect(() => {
+    document.body.classList.remove("dark-only");
+    document.body.classList.add("light-only");
+  }, []);
   return (
     <NoSsr>
       <Head>

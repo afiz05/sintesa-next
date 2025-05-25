@@ -14,14 +14,14 @@ const SidebarLogo = () => {
           src={"/assets/images/logo/sintesa_type_sapphire_blue.svg"}
           alt="icon"
           width={121}
-          height={100}
+          height={110}
         />
         <Image
           className="img-fluid for-dark"
           src={"/assets/images/logo/sintesa_type_white.svg"}
           alt="icon"
           width={121}
-          height={100}
+          height={110}
         />
       </Link>
       <div

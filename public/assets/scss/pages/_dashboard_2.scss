@@ -124,11 +124,11 @@
 
 .appointment {
   .customer-table {
-    @media (max-width:1470px) {
+    @media (max-width: 1470px) {
       height: 268px;
     }
 
-    @media (max-width:1399px) {
+    @media (max-width: 1399px) {
       height: unset;
     }
   }
@@ -202,15 +202,15 @@
     margin: -10px -16px 0;
   }
 
-  @media (max-width:1500px) {
+  @media (max-width: 1500px) {
     margin: -10px -14px 0;
   }
 
-  @media (max-width:1472px) {
+  @media (max-width: 1472px) {
     margin: -10px -20px 0;
   }
 
-  @media (max-width:1424px) {
+  @media (max-width: 1424px) {
     margin: -10px -25px 0;
   }
 
@@ -223,7 +223,7 @@
       .apexcharts-datalabel-value {
         font-size: 14px;
         font-weight: 500;
-        font-family: $font-rubik, $font-serif !important;
+        font-family: $font-figtree, $font-serif !important;
         fill: var(--chart-text-color);
       }
     }
@@ -379,7 +379,6 @@
     }
 
     tr {
-
       td,
       th {
         padding: 12px 8px;
@@ -569,7 +568,8 @@
   .frame-image {
     min-width: 62px;
     height: 62px;
-    border-color: var(--recent-border) var(--white) var(--white) var(--recent-border);
+    border-color: var(--recent-border) var(--white) var(--white)
+      var(--recent-border);
     border-width: 1px;
     border-style: solid;
     margin: 6px;
@@ -602,7 +602,6 @@
 .new-update {
   .media {
     .media-body {
-
       span,
       p {
         font-weight: 500;
@@ -611,15 +610,11 @@
   }
 }
 
-@each $activity-dot-name,
-$activity-dot-color in (primary, $primary-color),
-(secondary, $secondary-color),
-(success, $success-color),
-(danger, $danger-color),
-(info, $info-color),
-(light, $light-color),
-(dark, $dark-color),
-(warning, $warning-color) {
+@each $activity-dot-name, $activity-dot-color in (primary, $primary-color),
+  (secondary, $secondary-color), (success, $success-color),
+  (danger, $danger-color), (info, $info-color), (light, $light-color),
+  (dark, $dark-color), (warning, $warning-color)
+{
   .activity-dot-#{$activity-dot-name} {
     min-width: 6px;
     height: 6px;
@@ -639,7 +634,6 @@ $activity-dot-color in (primary, $primary-color),
     position: relative;
     z-index: 2;
   }
-
 }
 
 // responsive

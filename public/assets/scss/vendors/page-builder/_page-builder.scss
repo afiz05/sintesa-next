@@ -37,7 +37,7 @@
 
     .ge-wrapper {
       color: $white;
-      font-family: $font-rubik, $font-serif;
+      font-family: $font-figtree, $font-serif;
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
@@ -116,7 +116,7 @@
         margin: 0 0 5px;
         display: block;
 
-        >a {
+        > a {
           display: inline-block;
           padding: 5px;
 
@@ -150,11 +150,11 @@
         margin-right: 0;
         border-radius: 4px;
 
-        >.ge-tools-drawer {
+        > .ge-tools-drawer {
           text-align: right;
           width: 100%;
 
-          >a {
+          > a {
             color: $gray-60;
             font-size: 11px;
           }
@@ -167,13 +167,13 @@
         padding: 15px;
         border-radius: 4px;
 
-        >.ge-tools-drawer {
+        > .ge-tools-drawer {
           a {
             color: $gray-60;
             font-size: 11px;
           }
 
-          >a.ge-add-row {
+          > a.ge-add-row {
             color: $dark-color;
           }
         }
